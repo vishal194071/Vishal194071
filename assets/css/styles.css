@@ -498,8 +498,10 @@ img {
     margin-right: var(--mb-4);
   }
   .home__img {
-    width: 457px;
-    bottom: 15%;
+    position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0px;
   }
   .about__container, .skills__container {
     grid-template-columns: repeat(2, 1fr);
