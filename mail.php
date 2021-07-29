@@ -1,18 +1,17 @@
 <?php
 //get data from form  
-$name = $_POST['username'];
-$email= $_POST['email'];
+$name = $_POST['name'];
+$visitor_email= $_POST['email'];
 $message= $_POST['text'];
 
-$email_from='vishal194071.github.io/Vishal194071/';
+$email_from='vishalpratapsingh4071@gmail.com';
 $to = "vishalsingh194071@gmail.com";
 $subject = "Mail From website";
-$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: contact_request@portfoliosite.com" . "\r\n" .
-"CC: somebodyelse@example.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
-}
+$txt ="Name = ". $name . "\r\n  Email = " . $visitor_email . "\r\n Message =" . $message;
+$headers = "From: $email_from \r\n";
+$headers .="Reply-To: $visitor_email \r\n;
+mail($to,$subject,$txt,$headers);
+
 //redirect
 header("Location:index.html");
 ?>
