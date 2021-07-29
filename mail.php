@@ -3,7 +3,9 @@
 $name = $_POST['username'];
 $email= $_POST['email'];
 $message= $_POST['text'];
-$to = "vishalsingh194071@mail.com";
+
+$email_from='vishal194071.github.io/Vishal194071/';
+$to = "vishalsingh194071@gmail.com";
 $subject = "Mail From website";
 $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
 $headers = "From: contact_request@portfoliosite.com" . "\r\n" .
